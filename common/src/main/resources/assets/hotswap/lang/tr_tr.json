@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Değiştirmeyi önlemek için basılı tutun",
-  "key.hotswap.toggle": "Açık/Kapalı Değiştir",
-  "chat.hotswap.toggleEnable": "HotSwap etkin: %s",
-  "chat.hotswap.toggleEnable.true": "Doğru",
-  "chat.hotswap.toggleEnable.false": "Yanlış",
-  "key.category.hotswap": "HotSwap"
-}

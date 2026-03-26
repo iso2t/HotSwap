@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Удерживайте для предотвращения переключения",
-  "key.hotswap.toggle": "Переключение вкл/выкл",
-  "chat.hotswap.toggleEnable": "Горячая замена включена: %s",
-  "chat.hotswap.toggleEnable.true": "Правда",
-  "chat.hotswap.toggleEnable.false": "Ложь",
-  "key.category.hotswap": "HotSwap"
-}

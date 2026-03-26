@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Pidä kiinni vaihtamisen estämiseksi",
-  "key.hotswap.toggle": "Kytke päälle/pois",
-  "chat.hotswap.toggleEnable": "HotSwap käytössä: %s",
-  "chat.hotswap.toggleEnable.true": "Totta",
-  "chat.hotswap.toggleEnable.false": "False",
-  "key.category.hotswap": "HotSwap"
-}

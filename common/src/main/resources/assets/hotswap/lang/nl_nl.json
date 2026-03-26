@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Vasthouden om verwisselen te voorkomen",
-  "key.hotswap.toggle": "Aan/uit schakelen",
-  "chat.hotswap.toggleEnable": "HotSwap ingeschakeld: %s",
-  "chat.hotswap.toggleEnable.true": "Echt",
-  "chat.hotswap.toggleEnable.false": "Valse",
-  "key.category.hotswap": "HotSwap"
-}

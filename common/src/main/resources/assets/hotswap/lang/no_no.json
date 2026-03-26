@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Hold for å forhindre bytte",
-  "key.hotswap.toggle": "Veksle på/av",
-  "chat.hotswap.toggleEnable": "HotSwap aktivert: %s",
-  "chat.hotswap.toggleEnable.true": "Sant",
-  "chat.hotswap.toggleEnable.false": "Falsk",
-  "key.category.hotswap": "HotSwap"
-}

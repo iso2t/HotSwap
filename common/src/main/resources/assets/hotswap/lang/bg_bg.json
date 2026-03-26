@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Задръжте, за да предотвратите размяна",
-  "key.hotswap.toggle": "Превключване на включване/изключване",
-  "chat.hotswap.toggleEnable": "Активирана е функцията HotSwap: %s",
-  "chat.hotswap.toggleEnable.true": "Истински",
-  "chat.hotswap.toggleEnable.false": "False",
-  "key.category.hotswap": "HotSwap"
-}

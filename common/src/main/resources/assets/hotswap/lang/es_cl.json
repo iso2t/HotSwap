@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Mantener para evitar el intercambio",
-  "key.hotswap.toggle": "Toggle Activar/Desactivar",
-  "chat.hotswap.toggleEnable": "HotSwap activado: %s",
-  "chat.hotswap.toggleEnable.true": "Verdadero",
-  "chat.hotswap.toggleEnable.false": "Falso",
-  "key.category.hotswap": "HotSwap"
-}

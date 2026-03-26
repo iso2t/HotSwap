@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Podržte, abyste zabránili výměně",
-  "key.hotswap.toggle": "Přepínání zapnuto/vypnuto",
-  "chat.hotswap.toggleEnable": "HotSwap povolen: %s",
-  "chat.hotswap.toggleEnable.true": "Pravda",
-  "chat.hotswap.toggleEnable.false": "False",
-  "key.category.hotswap": "HotSwap"
-}

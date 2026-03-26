@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Maintenir pour éviter l'échange",
-  "key.hotswap.toggle": "Activation/désactivation de l'interrupteur",
-  "chat.hotswap.toggleEnable": "HotSwap activé : %s",
-  "chat.hotswap.toggleEnable.true": "Vrai",
-  "chat.hotswap.toggleEnable.false": "Faux",
-  "key.category.hotswap": "HotSwap"
-}

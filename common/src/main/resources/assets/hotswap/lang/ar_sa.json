@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "انتظر لمنع التبديل",
-  "key.hotswap.toggle": "تبديل تشغيل/إيقاف التشغيل",
-  "chat.hotswap.toggleEnable": "تم تمكين HotSwap: %s",
-  "chat.hotswap.toggleEnable.true": "صحيح",
-  "chat.hotswap.toggleEnable.false": "خطأ",
-  "key.category.hotswap": "HotSwap"
-}

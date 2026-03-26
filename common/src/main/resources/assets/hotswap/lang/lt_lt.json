@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Laikykite, kad būtų išvengta apsikeitimo",
-  "key.hotswap.toggle": "Įjungimo ir išjungimo perjungimas",
-  "chat.hotswap.toggleEnable": "HotSwap įjungtas: %s",
-  "chat.hotswap.toggleEnable.true": "Tiesa",
-  "chat.hotswap.toggleEnable.false": "Klaidingas",
-  "key.category.hotswap": "HotSwap"
-}

@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "스왑을 방지하려면 길게 누르기",
-  "key.hotswap.toggle": "켜기/끄기 토글",
-  "chat.hotswap.toggleEnable": "핫스왑 사용: %s",
-  "chat.hotswap.toggleEnable.true": "True",
-  "chat.hotswap.toggleEnable.false": "False",
-  "key.category.hotswap": "핫스왑"
-}

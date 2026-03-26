@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Țineți apăsat pentru a preveni permutarea",
-  "key.hotswap.toggle": "Comutare On/Off",
-  "chat.hotswap.toggleEnable": "HotSwap activat: %s",
-  "chat.hotswap.toggleEnable.true": "Adevărat",
-  "chat.hotswap.toggleEnable.false": "Fals",
-  "key.category.hotswap": "HotSwap"
-}

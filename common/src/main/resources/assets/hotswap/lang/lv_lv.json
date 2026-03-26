@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Aizturēšana, lai novērstu apmainīšanu",
-  "key.hotswap.toggle": "Pārslēgšana ieslēgts/izslēgts",
-  "chat.hotswap.toggleEnable": "Ieslēgts HotSwap: %s",
-  "chat.hotswap.toggleEnable.true": "True",
-  "chat.hotswap.toggleEnable.false": "Viltus",
-  "key.category.hotswap": "HotSwap"
-}

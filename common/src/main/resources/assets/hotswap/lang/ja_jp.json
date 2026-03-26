@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "スワップ防止ホールド",
-  "key.hotswap.toggle": "オン/オフの切り替え",
-  "chat.hotswap.toggleEnable": "HotSwap 有効: %s",
-  "chat.hotswap.toggleEnable.true": "真",
-  "chat.hotswap.toggleEnable.false": "偽",
-  "key.category.hotswap": "HotSwap"
-}

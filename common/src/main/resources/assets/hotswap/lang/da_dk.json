@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Hold for at forhindre ombytning",
-  "key.hotswap.toggle": "Skift til/fra",
-  "chat.hotswap.toggleEnable": "HotSwap aktiveret: %s",
-  "chat.hotswap.toggleEnable.true": "Sandt",
-  "chat.hotswap.toggleEnable.false": "Falsk",
-  "key.category.hotswap": "HotSwap"
-}

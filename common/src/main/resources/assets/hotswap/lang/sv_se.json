@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Håll för att förhindra byte",
-  "key.hotswap.toggle": "Växla på/av",
-  "chat.hotswap.toggleEnable": "HotSwap aktiverad: %s",
-  "chat.hotswap.toggleEnable.true": "Sant",
-  "chat.hotswap.toggleEnable.false": "Falsk",
-  "key.category.hotswap": "HotSwap"
-}

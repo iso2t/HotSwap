@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "Držite, da preprečite zamenjavo",
-  "key.hotswap.toggle": "Preklapljanje med vklopom in izklopom",
-  "chat.hotswap.toggleEnable": "HotSwap je omogočen: %s",
-  "chat.hotswap.toggleEnable.true": "Resnično",
-  "chat.hotswap.toggleEnable.false": "Lažno",
-  "key.category.hotswap": "HotSwap"
-}

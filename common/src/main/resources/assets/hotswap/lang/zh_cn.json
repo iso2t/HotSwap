@@ -1,8 +1,0 @@
-{
-  "key.hotswap.preventSwitch": "保持以防止交换",
-  "key.hotswap.toggle": "切换开/关",
-  "chat.hotswap.toggleEnable": "已启用热插拔： %s",
-  "chat.hotswap.toggleEnable.true": "正确",
-  "chat.hotswap.toggleEnable.false": "假的",
-  "key.category.hotswap": "热交换"
-}
