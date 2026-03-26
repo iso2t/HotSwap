@@ -1,36 +1,36 @@
 {
-    "schemaVersion": 1,
-    "id": "${mod_id}",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
-    ],
-    "contact": {
-        "homepage": "https://superscary.net/minecraft/hotswap",
-        "sources": "https://github.com/SuperScary/HotSwap"
-    },
-    "license": "MIT",
-    "icon": "${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "net.superscary.hotswap.HotSwapFabric"
-        ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
-        "minecraft": "~${minecraft_version}",
-        "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://iso2t.com/hotswap",
+    "sources": "https://github.com/iso2t/HotSwap"
+  },
+  "license": "MIT",
+  "icon": "${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.iso2t.hotswap.HotSwapFabric"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=${java_version}"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }
   

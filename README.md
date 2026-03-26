@@ -1,7 +1,7 @@
 ![CurseForge Game Versions](https://img.shields.io/curseforge/game-versions/404217?logo=curseforge&label=CurseForge&style=for-the-badge)
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/DzrFkrG2?logo=modrinth&style=for-the-badge)
-![GitHub branch check runs](https://img.shields.io/github/check-runs/SuperScary/HotSwap/main?style=for-the-badge)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SuperScary/HotSwap/build.yml?style=for-the-badge)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/iso2t/HotSwap/main?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/iso2t/HotSwap/build.yml?style=for-the-badge)
 
 ![Demo GIF](https://i.ibb.co/q9y4SFq/ezgif-6-65308f07ed.gif)
 
@@ -57,7 +57,7 @@ HotSwap ensures you always have the right tool in hand without manual inventory 
 
 ## 📜 Changelog
 
-See [the changelog](https://superscary.net/minecraft/hotswap/changelog) for a full history of changes and releases.
+See [the changelog](https://iso2t.com/hotswap/changelog) for a full history of changes and releases.
 
 ---
 

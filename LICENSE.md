@@ -1,8 +1,8 @@
 ## MIT License
 
-### Copyright (c) 2020-2025 SuperScary
+### Copyright (c) 2020-2026 iso2t
 
-This license applies to the files as supplied by github.com/SuperScary/HotSwap
+This license applies to the files as supplied by github.com/iso2t/HotSwap
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
