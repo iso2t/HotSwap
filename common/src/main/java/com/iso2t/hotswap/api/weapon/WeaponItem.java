@@ -1,6 +1,7 @@
 package com.iso2t.hotswap.api.weapon;
 
 import com.google.common.base.Preconditions;
+import com.google.common.util.concurrent.AtomicDouble;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -40,26 +41,26 @@ public final class WeaponItem {
 	}
 
 	private float getDamageFor (@NotNull ItemStack stack) {
-		final double[] total = { 0.0 };
+		AtomicDouble total = new AtomicDouble(0.f);
 		stack.forEachModifier(EquipmentSlot.MAINHAND, (holder, modifier) -> {
 			if (holder.value() == Attributes.ATTACK_DAMAGE) {
-				total[0] += modifier.amount();
+				total.getAndAdd(modifier.amount());
 			}
 		});
 
-		return (float) total[0];
+		return total.floatValue();
 	}
 
 	// TODO: Return attack speed for given tool.
 	private float getSpeedFor (ItemStack stack) {
-		final double[] total = { 0.0 };
+		AtomicDouble total = new AtomicDouble(0.f);
 		stack.forEachModifier(EquipmentSlot.MAINHAND, (holder, modifier) -> {
 			if (holder.value() == Attributes.ATTACK_SPEED) {
-				total[0] += modifier.amount();
+                total.getAndAdd(modifier.amount());
 			}
 		});
 
-		return (float) total[0];
+		return total.floatValue();
 	}
 
 	public Item getItem () {

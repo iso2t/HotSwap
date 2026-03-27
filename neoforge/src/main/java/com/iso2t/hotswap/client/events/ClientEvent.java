@@ -3,6 +3,8 @@ package com.iso2t.hotswap.client.events;
 import com.iso2t.hotswap.HotSwap;
 import com.iso2t.hotswap.config.defs.ToolSwap;
 import com.iso2t.hotswap.events.HotSwapEvents;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -24,11 +26,13 @@ public class ClientEvent {
     }
 
     public static void finishBlockBreak(InputEvent.MouseButton.Pre event) {
-        HotSwapEvents.finishBlockBreak(event.getButton(), event.getAction());
+        var mousePosX = Minecraft.getInstance().mouseHandler.xpos();
+        var mousePosY = Minecraft.getInstance().mouseHandler.ypos();
+        HotSwapEvents.finishBlockBreak(new MouseButtonEvent(mousePosX, mousePosY, event.getMouseButtonInfo()), event.getAction());
     }
 
     public static void toggleOnOff(InputEvent.Key event) {
-        HotSwapEvents.toggleOnOff(event.getKey(), event.getAction());
+        HotSwapEvents.toggleOnOff(event.getKeyEvent(), event.getAction());
     }
 
     public static void holdOff(ClientTickEvent.Pre event) {
