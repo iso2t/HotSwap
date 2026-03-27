@@ -2,6 +2,8 @@ package com.iso2t.hotswap.events;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -11,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import com.iso2t.hotswap.HotSwap;
+import com.iso2t.hotswap.api.ConfigChecks;
 import com.iso2t.hotswap.api.armor.ArmorHelper;
 import com.iso2t.hotswap.api.tool.ToolHelper;
 import com.iso2t.hotswap.config.ModConfig;
@@ -27,6 +30,8 @@ public class HotSwapEvents {
 	private static final ModConfig CONFIG = HotSwap.CONFIG;
 
 	private static boolean enabled = true;
+	private static long lastMineSwapMs = 0L;
+	private static long lastAttackSwapMs = 0L;
 	private static int currentSelected = -1;
 	private static int newSelected = -1;
 	private static boolean modified = false;
@@ -42,6 +47,16 @@ public class HotSwapEvents {
 	 */
 	public static void onBeginBreak (Player player, BlockState old, BlockState targetBlock) {
 		if (!allow || !enabled || !CONFIG.ACTIONS.MINE.ENABLED.get()) return;
+		if (ConfigChecks.BlockHelper.configBlacklistMine(targetBlock.getBlock())) {
+			if (heldKey && currentSelected >= 0) {
+				player.getInventory().setSelectedSlot(currentSelected);
+			}
+			modified = false;
+			oldBlock = null;
+			return;
+		}
+		long cooldownMs = CONFIG.ACTIONS.MINE.COOLDOWN.get();
+		if (cooldownMs > 0 && (System.currentTimeMillis() - lastMineSwapMs) < cooldownMs) return;
 		if ((player.isCreative() == CONFIG.BASIC.ALLOW_IN_CREATIVE.get()) || CONFIG.BASIC.ALLOW_IN_SURVIVAL.get() || CONFIG.BASIC.ALLOW_IN_ADVENTURE.get()) {
 			oldBlock = old.getBlock();
 			if (!modified || oldBlock == targetBlock.getBlock() || oldBlock != null) {
@@ -50,6 +65,7 @@ public class HotSwapEvents {
 					currentSelected = player.getInventory().getSelectedSlot();
 				newSelected = ToolHelper.getBestToolFor(targetBlock, player);
 				player.getInventory().setSelectedSlot(newSelected);
+				lastMineSwapMs = System.currentTimeMillis();
 			}
 		}
 	}
@@ -61,23 +77,27 @@ public class HotSwapEvents {
 	 */
 	public static void attackEntity (Player player, Entity target) {
 		if (!allow || !CONFIG.BASIC.ALLOW_FOR_ATTACKING.get() || !CONFIG.ACTIONS.ATTACK.ENABLED.get() || !enabled) return;
+		long cooldownMs = CONFIG.ACTIONS.ATTACK.COOLDOWN.get();
+		if (cooldownMs > 0 && (System.currentTimeMillis() - lastAttackSwapMs) < cooldownMs) return;
 		currentSelected = player.getInventory().getSelectedSlot();
 		newSelected = ToolHelper.getBestWeaponFor(player, target, CONFIG.ACTIONS.ATTACK.ALLOW_AXES_FOR_ATTACKING.get());
 		player.getInventory().setSelectedSlot(newSelected);
+		lastAttackSwapMs = System.currentTimeMillis();
 	}
 
-	/**
-	 * Called when the player finishes breaking a block.
-	 * @param button The button pressed
-	 * @param action The action performed
-	 */
-	public static void finishBlockBreak (int button, int action) {
+    /**
+     * Handles the action of finishing a block-breaking event based on mouse input.
+     *
+     * @param event The mouse button event that triggered the method. Contains details about the mouse position and button state.
+     * @param action Integer representing the modifier keys (e.g., Shift, Ctrl) pressed during the event.
+     */
+	public static void finishBlockBreak (MouseButtonEvent event, int action) {
 		if (!allow || !enabled) return;
 		if (Minecraft.getInstance().screen != null || Minecraft.getInstance().player == null) return;
 		Player player = Minecraft.getInstance().player;
 
 		var options = Minecraft.getInstance().options;
-		var mouse = options.keyAttack.getDefaultKey().getValue() == button && options.keyAttack.getDefaultKey().getType() == InputConstants.Type.MOUSE;
+		var mouse = options.keyAttack.matchesMouse(event);
 
 		if (mouse && action == InputConstants.PRESS) {
 			heldKey = true;
@@ -92,17 +112,20 @@ public class HotSwapEvents {
 		}
 	}
 
-	/**
-	 * Called when the player toggles the mod on or off.
-	 * @param button The button pressed
-	 * @param action The action performed
-	 */
-	public static void toggleOnOff (int button, int action) {
+    /**
+     * Toggles the mod's enabled state based on a key event and action.
+     * This method evaluates the key event to determine if the toggle keybinding is triggered and changes the enabled state accordingly.
+     * A system message is then sent to the player to reflect the current enabled/disabled status.
+     *
+     * @param event The key event that triggered this method. Contains information about the key code and modifiers.
+     * @param action The action associated with the key event (e.g., press, release). Used to determine the context of the input.
+     */
+	public static void toggleOnOff (KeyEvent event, int action) {
 		if (!allow) return;
 		if (Minecraft.getInstance().screen != null || Minecraft.getInstance().player == null) return;
 
 		Player player = Minecraft.getInstance().player;
-		if (Keybindings.INSTANCE.toggle.getDefaultKey().getValue() == button && Keybindings.INSTANCE.toggle.getDefaultKey().getType() == InputConstants.Type.KEYSYM && action == InputConstants.PRESS) {
+		if (Keybindings.INSTANCE.toggle.matches(event) && action == InputConstants.PRESS) {
 			enabled = !enabled;
 			player.sendSystemMessage(Component.translatable("chat.hotswap.toggleEnable", getEnabled(enabled)));
 		}

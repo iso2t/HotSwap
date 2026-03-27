@@ -145,10 +145,13 @@ public class ConfigChecks {
 
 		public static boolean configBlacklistMine (Block block) {
 			if (block == null) return false;
-			var b = HotSwap.CONFIG.ACTIONS.MINE.BLACKLIST.get().contains(block.toString());
-			HotSwap.logAction("Checking block: " + block.getDescriptionId());
-			HotSwap.logAction("Is blacklisted: " + b);
-			return b;
+			var list = HotSwap.CONFIG.ACTIONS.MINE.BLACKLIST.get();
+			if (list == null || list.isEmpty()) return false;
+
+			var key = BuiltInRegistries.BLOCK.getKey(block);
+			String registryId = key == null ? null : key.toString();
+			String descriptionId = block.getDescriptionId();
+			return (registryId != null && list.contains(registryId)) || (descriptionId != null && list.contains(descriptionId));
 		}
 	}
 
