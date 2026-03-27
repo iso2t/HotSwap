@@ -24,6 +24,17 @@ pluginManagement {
                 includeGroupAndSubgroups("org.spongepowered")
             }
         }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "ISO2T Releases"
+                    url = uri('https://maven.iso2t.com/releases')
+                }
+            }
+            filter {
+                includeGroupAndSubgroups("com.iso2t.configmanager")
+            }
+        }
     }
 }
 

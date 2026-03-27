@@ -1,8 +1,8 @@
 package com.iso2t.hotswap;
 
+import com.iso2t.configmanager.manager.ConfigManager;
 import com.iso2t.hotswap.config.ModConfig;
 import com.iso2t.hotswap.platform.Services;
-import com.iso2t.superconfig.manager.ConfigManager;
 
 import java.io.IOException;
 import java.nio.file.Path;

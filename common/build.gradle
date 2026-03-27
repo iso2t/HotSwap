@@ -12,12 +12,19 @@ neoForge {
     }
 }
 
+repositories {
+    maven {
+        name = "ISO2T Releases"
+        url = uri('https://maven.iso2t.com/releases')
+    }
+}
+
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
     // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
     compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
     annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
-    implementation "net.superscary:SuperConfig:${superconfig_version}"
+    implementation "com.iso2t.configmanager:configmanager:1.0.0"
 }
 
 configurations {

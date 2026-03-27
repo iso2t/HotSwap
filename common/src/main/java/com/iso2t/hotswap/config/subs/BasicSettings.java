@@ -1,8 +1,8 @@
 package com.iso2t.hotswap.config.subs;
 
-import com.iso2t.superconfig.annotations.Comment;
-import com.iso2t.superconfig.annotations.Config;
-import com.iso2t.superconfig.value.wrappers.BooleanValue;
+import com.iso2t.configmanager.annotations.Comment;
+import com.iso2t.configmanager.annotations.Config;
+import com.iso2t.configmanager.value.wrappers.BooleanValue;
 
 @Config(name = "basic_settings")
 public class BasicSettings {

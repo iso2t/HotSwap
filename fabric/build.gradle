@@ -2,12 +2,20 @@ plugins {
     id 'multiloader-loader'
     id 'net.fabricmc.fabric-loom'
 }
+
+repositories {
+    maven {
+        name = "ISO2T Releases"
+        url = uri('https://maven.iso2t.com/releases')
+    }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
-    implementation "net.superscary:SuperConfig:${superconfig_version}"
+    implementation "com.iso2t.configmanager:configmanager:1.0.0"
 }
 
 loom {

@@ -1,10 +1,10 @@
 package com.iso2t.hotswap.config.subs;
 
+import com.iso2t.configmanager.annotations.Comment;
+import com.iso2t.configmanager.annotations.Config;
+import com.iso2t.configmanager.value.wrappers.BooleanValue;
+import com.iso2t.configmanager.value.wrappers.EnumValue;
 import com.iso2t.hotswap.config.defs.LogLevel;
-import com.iso2t.superconfig.annotations.Comment;
-import com.iso2t.superconfig.annotations.Config;
-import com.iso2t.superconfig.value.wrappers.BooleanValue;
-import com.iso2t.superconfig.value.wrappers.EnumValue;
 
 @Config(name = "Debug")
 public class DebugSettings {

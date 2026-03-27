@@ -3,8 +3,15 @@ plugins {
     id 'net.neoforged.moddev'
 }
 
+repositories {
+    maven {
+        name = "ISO2T Releases"
+        url = uri('https://maven.iso2t.com/releases')
+    }
+}
+
 dependencies {
-    implementation("net.superscary:SuperConfig:${superconfig_version}")
+    implementation "com.iso2t.configmanager:configmanager:1.0.0"
 }
 
 neoForge {

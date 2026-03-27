@@ -1,7 +1,7 @@
 package com.iso2t.hotswap.config.subs;
 
-import com.iso2t.superconfig.annotations.Comment;
-import com.iso2t.superconfig.annotations.Config;
+import com.iso2t.configmanager.annotations.Comment;
+import com.iso2t.configmanager.annotations.Config;
 
 @Config(name = "action_settings")
 public class ActionSettings {
