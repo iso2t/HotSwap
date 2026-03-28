@@ -1,6 +1,7 @@
 package com.iso2t.hotswap.config.subs;
 
 import com.iso2t.configmanager.annotations.Comment;
+import com.iso2t.configmanager.annotations.CommentValues;
 import com.iso2t.configmanager.annotations.Config;
 import com.iso2t.configmanager.value.wrappers.BooleanValue;
 import com.iso2t.configmanager.value.wrappers.EnumValue;
@@ -21,8 +22,8 @@ public class ArmorSettings {
 	public BooleanValue ALLOW_ELYTRA = new BooleanValue(true);
 
 	@Comment({"Swap armor when it breaks/low durability.",
-			"If set to LOW_DURABILITY, it will swap to the best first match with a higher durability.",
-			"Possible values: \"BREAK\" | \"LOW_DURABILITY\""})
+			"If set to LOW_DURABILITY, it will swap to the best first match with a higher durability."})
+    @CommentValues
 	public EnumValue<ArmorSwap> ARMOR_SWAP_BEHAVIOR = new EnumValue<>(ArmorSwap.class, ArmorSwap.BREAK);
 
 	@Comment({"Which tag groups to consider when swapping armor.",

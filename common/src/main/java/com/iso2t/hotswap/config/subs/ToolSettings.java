@@ -1,6 +1,7 @@
 package com.iso2t.hotswap.config.subs;
 
 import com.iso2t.configmanager.annotations.Comment;
+import com.iso2t.configmanager.annotations.CommentValues;
 import com.iso2t.configmanager.annotations.Config;
 import com.iso2t.configmanager.value.wrappers.BooleanValue;
 import com.iso2t.configmanager.value.wrappers.EnumValue;
@@ -16,8 +17,8 @@ public class ToolSettings {
 	public BooleanValue ENABLED = new BooleanValue(true);
 
 	@Comment({"Swap tool when it breaks/low durability.",
-			"If set to LOW_DURABILITY, it will swap to the best first match with a higher durability.",
-			"Possible values: \"BREAK\" | \"LOW_DURABILITY\""})
+			"If set to LOW_DURABILITY, it will swap to the best first match with a higher durability."})
+    @CommentValues
 	public EnumValue<ToolSwap> TOOL_SWAP_BEHAVIOR = new EnumValue<>(ToolSwap.class, ToolSwap.BREAK);
 
 	@Comment({"Which tag groups to consider when swapping tools.",

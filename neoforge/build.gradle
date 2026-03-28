@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation "com.iso2t.configmanager:configmanager:1.0.0"
+    implementation "com.iso2t:ConfigManager:1.1.1"
 }
 
 neoForge {
