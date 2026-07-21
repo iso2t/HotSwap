@@ -1,7 +1,7 @@
 package com.iso2t.hotswap.config;
 
-import com.iso2t.configmanager.annotations.Comment;
-import com.iso2t.configmanager.annotations.Config;
+import com.iso2t.easyconfig.api.annotations.Comment;
+import com.iso2t.easyconfig.api.annotations.Config;
 import com.iso2t.hotswap.config.subs.*;
 
 @Config(name = "hotswap")

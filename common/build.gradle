@@ -24,7 +24,7 @@ dependencies {
     // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
     compileOnly "io.github.llamalad7:mixinextras-common:0.5.3"
     annotationProcessor "io.github.llamalad7:mixinextras-common:0.5.3"
-    implementation "com.iso2t:ConfigManager:1.1.1"
+    implementation "com.iso2t.easyconfig:easyconfig-api-26.2:26.1.0.0"
 }
 
 configurations {

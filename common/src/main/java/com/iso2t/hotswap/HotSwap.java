@@ -1,12 +1,9 @@
 package com.iso2t.hotswap;
 
-import com.iso2t.configmanager.manager.ConfigManager;
+import com.iso2t.easyconfig.api.ConfigBuilder;
+import com.iso2t.easyconfig.api.files.FileTypes;
 import com.iso2t.hotswap.config.ModConfig;
 import com.iso2t.hotswap.platform.Services;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class HotSwap {
 
@@ -35,13 +32,6 @@ public class HotSwap {
     }
 
     static {
-        Path configPath = Paths.get("config", Constants.MOD_ID + ".json5");
-        ConfigManager<ModConfig> configManager = new ConfigManager<>(ModConfig.class, configPath);
-		try {
-			CONFIG = configManager.load();
-            configManager.save(CONFIG);
-		} catch (IOException | IllegalAccessException e) {
-			throw new RuntimeException(e);
-		}
+        CONFIG = ConfigBuilder.build(ModConfig.class, Constants.MOD_ID, FileTypes.JSON5);
     }
 }

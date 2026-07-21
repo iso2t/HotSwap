@@ -1,9 +1,7 @@
 package com.iso2t.hotswap.config.subs;
 
-import com.iso2t.configmanager.annotations.Comment;
-import com.iso2t.configmanager.annotations.Config;
+import com.iso2t.easyconfig.api.annotations.Comment;
 
-@Config(name = "action_settings")
 public class ActionSettings {
 
 	@Comment("Mining Settings")

@@ -93,7 +93,7 @@ public class HotSwapEvents {
      */
 	public static void finishBlockBreak (MouseButtonEvent event, int action) {
 		if (!allow || !enabled) return;
-		if (Minecraft.getInstance().screen != null || Minecraft.getInstance().player == null) return;
+		if (Minecraft.getInstance().gui.screen() != null || Minecraft.getInstance().player == null) return;
 		Player player = Minecraft.getInstance().player;
 
 		var options = Minecraft.getInstance().options;
@@ -122,7 +122,7 @@ public class HotSwapEvents {
      */
 	public static void toggleOnOff (KeyEvent event, int action) {
 		if (!allow) return;
-		if (Minecraft.getInstance().screen != null || Minecraft.getInstance().player == null) return;
+		if (Minecraft.getInstance().gui.screen() != null || Minecraft.getInstance().player == null) return;
 
 		Player player = Minecraft.getInstance().player;
 		if (Keybindings.INSTANCE.toggle.matches(event) && action == InputConstants.PRESS) {

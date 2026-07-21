@@ -43,7 +43,7 @@ public final class WeaponItem {
 	private float getDamageFor (@NotNull ItemStack stack) {
 		AtomicDouble total = new AtomicDouble(0.f);
 		stack.forEachModifier(EquipmentSlot.MAINHAND, (holder, modifier) -> {
-			if (holder.value() == Attributes.ATTACK_DAMAGE) {
+			if (holder.value() == Attributes.ATTACK_DAMAGE.value()) {
 				total.getAndAdd(modifier.amount());
 			}
 		});
@@ -55,7 +55,7 @@ public final class WeaponItem {
 	private float getSpeedFor (ItemStack stack) {
 		AtomicDouble total = new AtomicDouble(0.f);
 		stack.forEachModifier(EquipmentSlot.MAINHAND, (holder, modifier) -> {
-			if (holder.value() == Attributes.ATTACK_SPEED) {
+			if (holder.value() == Attributes.ATTACK_SPEED.value()) {
                 total.getAndAdd(modifier.amount());
 			}
 		});
